@@ -62,7 +62,7 @@ p {
     transition:box-shadow .2s;
     transition-delay:.1s;
     box-shadow:0px 0px 8px 0px #000;
-    background-color: #BA292E;
+    background-color: #2BC20E;
 }
 .navbar.open{
     box-shadow:none;
