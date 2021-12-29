@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="UTF-8">
+		<meta name="description" content="Web Learn - The easy way to learn web creation.">
+		<title>Web Learn - Create</title>
+		<link rel="icon" href="icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+            <div class="navbar" id="navigation">
+                <a href="/"><img class="logo logo-large" src="logo.png"/></a>
+                    <div class="menu-items">
+                    <a class="menu-item" href="index.html">Home</a>
+                    <a class="menu-item" href="about.html">About</a>
+                    <a class="menu-item" target="_blank" href="#">Create</a>
+                </div>
+            </div>
+		</header>
+		<div class="wrapper"> <!-- wrapper div starts -->
+            <div class="padder"></div>
+			<table>
+                <tr>
+                    <th id="add-elements">
+                        <h2>Add Elements</h2>
+                        <table id="user-actions">
+                            <th id="element-list">
+                                <div><i class="fa fa-paragraph"></i><button class="user-button" id="add-paragraph">Paragraph</button></div>
+                                <div><i class="fa fa-image"></i><button class="user-button" id="add-image">Image</button></div>
+                                <div><i class="fa fa-header"></i><button class="user-button" id="add-header">Header</button></div>
+                                <div><i class="fa fa-arrows-v"></i><button class="user-button" id="add-spacer">Line Break</button></div>
+                                <div><i class="fa fa-bars"></i><button class="user-button" id="add-divider">Divider</button></div>
+                                <div><i class="fa fa-hand-pointer-o"></i><button class="user-button" id="add-button">Button</button></div>
+                                <div><i class="fa fa-video-camera"></i><button class="user-button" id="add-iframe">Iframe</button></div>
+                            </th>
+                            <th>
+                                <i style="font-size: 35px;" class="fa fa-question" id="description-icon"></i>
+                                <h3 id="description-title"></h3>  
+                                <p id="element-description">Hover over an element to see its description</p>
+                            </th>
+                        </table>
+                    </th>
+                    <th id="site-build"></th>
+                </tr>
+            </table>
+            <div id="output">
+                <hr class="separator"/>
+                <h2>
+                    Code:
+                </h2>
+                <text id="output-code"></text>
+                <hr class="separator"/>
+                <h2>
+                    Page Preview:
+                </h2>
+                <div id="test">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <br style="height: 10px;"/>
+        </footer>
+		<script src="main.js"></script>
+	</body>
+</html>
