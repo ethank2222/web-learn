@@ -16,6 +16,7 @@ body{
     padding:0px;
     margin:0px;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 p {
     font-weight:100;
@@ -201,9 +202,17 @@ hr.separator{
     width: 35%;
     text-align: right;
     margin: auto;
+    animation-name: right;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 .flex-2{
     width: 30%;
+    animation-name: up;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 #chip-svg{
     width: 100%;
@@ -212,6 +221,11 @@ hr.separator{
     width: 35%;
     margin: auto;
     text-align: left;
+    animation-name: left;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 .flex-title{
     font-size: 60px;
@@ -255,4 +269,40 @@ section{
     width: 80%; 
     margin: auto;
     padding-bottom: 20px;
+}
+@keyframes left{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes right{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 899px){
+    .flex-1{
+        font-size: 40px;
+    }
+    .flex-3{
+        font-size: 40px;
+    }
 }
