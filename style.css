@@ -1,7 +1,7 @@
 /*
-red: BA292E
-black: 282528
-blue: 2E3D7C
+Purple: 550099
+black: 000000
+Cyan: 00ffff
 */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /*Header*/
@@ -62,7 +62,7 @@ p {
     transition:box-shadow .2s;
     transition-delay:.1s;
     box-shadow:0px 0px 8px 0px #000;
-    background-color: #2BC20E;
+    background-color: #550099;
 }
 .navbar.open{
     box-shadow:none;
