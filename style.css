@@ -306,3 +306,6 @@ section{
         font-size: 40px;
     }
 }
+.link{
+    color: var(--color-purple);
+}
