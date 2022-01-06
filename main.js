@@ -336,7 +336,7 @@ function categoryDetails(target){
 		}
 		case "add-iframe": {
             target.style.fontWeight = "bold";
-            document.getElementById("element-description").innerText = "An Iframe allows you to embed outside media on your website (videos, games, etc.). Find the 'embed code' for the iframe and paste it all in the 'Iframe Source' box.";
+            document.getElementById("element-description").innerText = "An Iframe allows you to embed outside media on your website (videos, games, etc.). Find the 'embed code' for the iframe and paste it all in the 'Iframe Source' box. To embed a Tynker game, click 'share' on your Tynker project page, click  the 'embed' and paste the text beginning with '<iframe' into the 'Iframe Source' box.";
             document.getElementById("description-title").innerText = "Iframe";
             document.getElementById("description-icon").className = "fa fa-video-camera";
 			break;
