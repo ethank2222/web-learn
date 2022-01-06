@@ -6,6 +6,7 @@ Cyan: 00ffff
 :root {
     --color-black: #000;
     --color-purple: #550099;
+    --color-light-purple: #C873FF;
     --color-cyan: #00ffff;
     --speed-fast: 0.4s;
     --speed-normal: 0.8s;
@@ -308,4 +309,10 @@ section{
 }
 .link{
     color: var(--color-purple);
+    text-decoration: none;
+    transition-duration: .5s;
+}
+.link:hover{
+    color: var(--color-light-purple);
+    text-decoration: none;
 }
