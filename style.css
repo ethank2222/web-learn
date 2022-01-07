@@ -308,12 +308,14 @@ section{
     }
 }
 .link{
-    color: var(--color-light-purple);
     text-decoration: none;
+    color: var(--color-purple);
+
     transition-duration: .5s;
 }
 .link:hover{
-    color: var(--color-purple);
+    color: var(--color-light-purple);
+
     text-decoration: none;
 }
 #learn-search{
@@ -365,4 +367,11 @@ span {
 }
 .inline{
     display: inline;
+}
+#result{
+    border-radius: 5px;
+    background-color: #ddd;
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
 }
