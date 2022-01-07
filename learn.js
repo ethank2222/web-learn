@@ -39,7 +39,7 @@ function search() {
         document.getElementById("result-description").innerText = "Common searches include 'paragraph' and 'header'"
         document.getElementById('result-tag').innerText = "";
         document.getElementById('result-more').innerText = "";
-        document.getElementById('result').lastChild.innerHTML = "";
+        document.getElementById('result-video').innerHTML = "";
     }
     else {
         switch (keyword){
@@ -54,6 +54,6 @@ function search() {
         document.getElementById('result-tag').innerText = obj.Tag;
         document.getElementById('result-description').innerText = obj.Description;
         document.getElementById('result-more').innerHTML = 'To learn more, see the W3Schools documentation <a href = ' + obj.More + ' class="link">here</a>.'
-        document.getElementById('result').lastChild.innerHTML = obj.Video;
+        document.getElementById('result-video').innerHTML = obj.Video;
     }
 }

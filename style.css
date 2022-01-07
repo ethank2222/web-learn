@@ -375,3 +375,6 @@ span {
     margin: 20px;
     padding: 20px;
 }
+iframe {
+    max-width: 70%;
+}
