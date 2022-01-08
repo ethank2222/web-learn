@@ -270,6 +270,7 @@ setInterval(function(){
                 newE.innerText = document.querySelector("#addedElement"+i+" .center-widget :nth-child(3)").value;
                 newE.setAttribute("href", document.querySelector("#addedElement"+i+" .center-widget :nth-child(7)").value);
                 newE.style = "color: black; background-color: #EFEFEF; border-radius: 1px; border: 1px solid black; padding: 4px; font-size: 14px; text-decoration: none;"
+                newE.setAttribute('target', '_blank')
                 temptext += newE.outerHTML;
             }
         }
@@ -289,17 +290,17 @@ window.addEventListener('click', function(e) {
 	categoryDetails(e.target);
 });
 function categoryDetails(target){
-    resetAll();
 	switch(target.id) {
 		case "add-paragraph": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "This element allows you to add text to your webpage. Large chunks of information usually go in a paragraph.";
 			document.getElementById("description-title").innerText = "Paragraph";
             document.getElementById("description-icon").className = "fa fa-paragraph";
-			
             break;
 		}
 		case "add-image": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "This element allows you to add an image to your website. Find an image online, then right click on the image and click open image in new tab. Copy the URL of the image and past it in the URL box.";
             document.getElementById("description-title").innerText = "Image";
@@ -307,6 +308,7 @@ function categoryDetails(target){
 			break;
 		}
 		case "add-header": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "This element adds a header to your website. If you have multiple sections, use this element to separate each section with a title.";
             document.getElementById("description-title").innerText = "Header";
@@ -314,6 +316,7 @@ function categoryDetails(target){
 			break;
 		}
 		case "add-spacer": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "Use this element to add space between two other elements.";
             document.getElementById("description-title").innerText = "Line Break";
@@ -321,6 +324,7 @@ function categoryDetails(target){
 			break;
 		}
 		case "add-divider": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "Use this element to divide two different sections.";
             document.getElementById("description-title").innerText = "Divider";
@@ -328,6 +332,7 @@ function categoryDetails(target){
 			break;
 		}
 		case "add-button": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "When clicked, a button will take the user to another website. Take the website address of another website and paste it in the 'target' box.";
             document.getElementById("description-title").innerText = "Button";
@@ -335,6 +340,7 @@ function categoryDetails(target){
 			break;
 		}
 		case "add-iframe": {
+            resetAll();
             target.style.fontWeight = "bold";
             document.getElementById("element-description").innerText = "An Iframe allows you to embed outside media on your website (videos, games, etc.). Find the 'embed code' for the iframe and paste it all in the 'Iframe Source' box. To embed a Tynker game, click 'share' on your Tynker project page, click  the 'embed' and paste the text beginning with '<iframe' into the 'Iframe Source' box.";
             document.getElementById("description-title").innerText = "Iframe";
