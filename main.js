@@ -72,7 +72,7 @@ document.getElementById("add-image").addEventListener('click', function(){
     
     var newElementOptions = document.createElement("div");
     document.getElementById("addedElement" + numElements).appendChild(newElementOptions);
-    newElementOptions.innerHTML = '<center class="center-widget"><label for="width">Image Width (Pixels):</label><br><input type="text" placeholder="Enter a number" name="width"><br><label for="height">Image Height (Pixels):</label><br><input type="text" placeholder="Enter a number" name="height"><br><label for="source">Image Source:</label><br><input type="text" placeholder="Enter a url" name="source"><br></center>';
+    newElementOptions.innerHTML = '<center class="center-widget"><label for="width">Image Width (Pixels):</label><br><input type="text" placeholder="Enter a number" name="width"><br><label for="height">Image Height (Pixels):</label><br><input type="text" placeholder="Enter a number" name="height"><br><label for="source">Image Source (URL):</label><br><input type="text" placeholder="Enter a url" name="source"><br></center>';
 
 
     var newElementDelete = document.createElement("button");
