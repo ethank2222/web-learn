@@ -1,12 +1,13 @@
 const info = {
     'paragraph':{
         'Name': 'Paragraph',
-        'Tag': '<p></p>',
+        'Tag': '<p>Your paragraph text here.</p>',
         'Description': 'This element allows you to add text to your webpage. Large chunks of information usually go in a paragraph.',
         'More': 'https://www.w3schools.com/html/html_paragraphs.asp',
         'Video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/smaZvGlhJlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     }
 }
+let all = ['paragraph', 'header'];
 
 setInterval(function(){
     var current = document.getElementById("learn-search").placeholder;
@@ -22,9 +23,53 @@ setInterval(function(){
 }, 400);
 
 document.getElementById('learn-search').onkeydown = function(e){
-    if(e.keyCode == 13){
-        search();
-    }
+    setTimeout(function(){
+        var value = document.getElementById('learn-search').value.toLowerCase();
+        if(e.keyCode == 13){
+            search();
+        }
+        else{
+            if (value == ""){
+                document.getElementById("list-options").remove();
+            }
+            else if (document.getElementById("list-options") == null){
+                var list = document.createElement('div');
+                list.id = "list-options";
+                list.style.left = "50%";
+                list.style.transform = "translateX(-50%)"
+                list.style.width = "300px";
+                list.style.position = "absolute";
+                list.style.backgroundColor = "rgba(230,230,230,1)";
+                list.style.zIndex = "10000";
+                document.getElementsByClassName('inline')[0].appendChild(list);
+            }
+            else{
+                for (var i = 0; i < document.getElementById("list-options").childElementCount; i++){
+                    if (document.getElementById("list-options").childNodes[i].innerText.indexOf(value) == -1){
+                        document.getElementById("list-options").childNodes[i].remove();
+                    }
+                }
+            }
+            var total = 0;
+            for (var i = 0; i < all.length; i++){
+                if (all[i].indexOf(value) != -1 && total <= 5){
+                    var option = document.createElement('p');
+                    option.innerText = all[i];
+                    option.style.textAlign = "left";
+                    option.style.padding = "10px";
+                    option.style.margin = "0px"
+                    option.style.fontSize = "18px";
+                    option.style.cursor = "pointer";
+                    list.appendChild(option);
+                    total ++;
+                    option.addEventListener('click', function(){
+                        document.getElementById('learn-search').value = this.innerText;
+                        search();
+                    });
+                }
+            }
+        }
+    }, 50)
 };
 
 document.getElementById("search-button").addEventListener("click", event => {
@@ -32,8 +77,8 @@ document.getElementById("search-button").addEventListener("click", event => {
 });
 
 function search() {
+    document.getElementById("list-options").remove();
     var keyword = document.getElementById('learn-search').value.toLowerCase();
-    var all = ['paragraph'];
     if (all.includes(keyword) == false){
         document.getElementById("result-header").innerText = "No results for '" + keyword + "'"
         document.getElementById("result-description").innerText = "Common searches include 'paragraph' and 'header'"
