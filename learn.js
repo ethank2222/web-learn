@@ -87,14 +87,7 @@ function search() {
         document.getElementById('result-video').innerHTML = "";
     }
     else {
-        switch (keyword){
-            case ('paragraph'): {
-                obj = info.paragraph;
-            }
-            case ('header'): {
-                obj = info.paragraph;
-            }
-        }
+        obj = info[keyword];
         document.getElementById('result-header').innerText = obj.Name;
         document.getElementById('result-tag').innerText = obj.Tag;
         document.getElementById('result-description').innerText = obj.Description;
