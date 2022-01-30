@@ -28,7 +28,7 @@ const info = {
         'Video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/xEvvtWXcExY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     }
 }
-let all = ['paragraph', 'header', 'image'];
+let all = ['paragraph', 'header', 'image', 'line break'];
 
 setInterval(function(){
     var current = document.getElementById("learn-search").placeholder;
