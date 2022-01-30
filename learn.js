@@ -12,9 +12,23 @@ const info = {
         'Description': 'This element adds a header to your website. If you have multiple sections, use this element to separate each section with a title.',
         'More': 'https://www.w3schools.com/tags/tag_header.asp',
         'Video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/s1jmDbZyEms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    'image':{
+        'Name': 'Image',
+        'Tag': '<i src=""/>',
+        'Description': 'This element adds an image to your website. All you need to add this element is the url of the image that you would like to add.',
+        'More': 'https://www.w3schools.com/tags/tag_img.asp',
+        'Video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/R72N-B-cpfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    },
+    'line break':{
+        'Name': 'Line Break',
+        'Tag': '<br/>',
+        'Description': 'This element adds a spacer to your website. Add multiple of these tags to add more space between two elements.',
+        'More': 'https://www.w3schools.com/tags/tag_br.asp',
+        'Video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/xEvvtWXcExY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     }
 }
-let all = ['paragraph', 'header'];
+let all = ['paragraph', 'header', 'image'];
 
 setInterval(function(){
     var current = document.getElementById("learn-search").placeholder;
