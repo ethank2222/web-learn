@@ -378,3 +378,6 @@ span {
 iframe {
     max-width: 70%;
 }
+#list-options > p:hover{
+    font-weight: bold;
+}
